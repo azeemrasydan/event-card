@@ -1,0 +1,16 @@
+.app-tilt-neon {
+    font-family: "Tilt Neon", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+        "XROT" -5,
+        "YROT" 0;
+}
+
+.app-wedding-img {
+    background-image: url('assets/wedding-image.jpg');
+    /* Adjust the path and file name as per your image */
+    background-size: cover;
+    background-position: center;
+}
