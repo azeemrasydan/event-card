@@ -9,5 +9,4 @@ import { BasePage } from "app/shared/page.base.component";
 })
 export class RegistrationPage extends BasePage {
     override pageTitle = 'Registration'
-
 }
