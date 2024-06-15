@@ -1,0 +1,34 @@
+.playwrite-fr-moderne-default {
+    font-family: "Playwrite FR Moderne", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.playwrite-fr-moderne-bold {
+    font-family: "Playwrite FR Moderne", cursive;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.app-fade-in-from-none-animate {
+    animation: fadeInFromNone 3s ease-out;
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
