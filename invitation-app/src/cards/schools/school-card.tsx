@@ -1,33 +1,39 @@
+import Particles from "@tsparticles/react";
+
 import WidgetsGroup from "../../components/widgets-group/widgets-group";
+import { CONFETTI_SCHOOLCARD } from "../../shared/particles/constants/option";
+import useParticles from "../../shared/particles/hook/useParticles";
+import Cover from "./cover";
 import "./school-card.css";
 
 export default function SchoolCard() {
-    return <>
-        <div className="absolute items-center top-36 w-full app-fade-in-from-none-animate ">
-            <h1 className="playwrite-fr-moderne-bold justify-center flex text-center">
-                MAJLIS GRADUASI
-            </h1>
-        </div>
-        <div className="absolute items-center top-48 app-fade-in-from-none-animate ">
-            <h1 className="text-3xl font-bold justify-center flex text-center">
-                SPM & APRESIASI KOKURIKULUM 2024
-            </h1>
-        </div>
-        <div className="absolute items-center top-[18rem] w-full app-fade-in-from-none-animate ">
-            <h1 className="flex font-bold justify-center text-center">
-                Jumaat, 19 DISEMBER 2024
-            </h1>
-        </div>
-        <div className="absolute items-center top-[22rem] w-full app-fade-in-from-none-animate ">
-            <h1 className="font-bold justify-center text-center">
-                DEWAN HANG TUAH
-            </h1>
-        </div>
-        <div className="absolute items-center top-[24rem] w-full app-fade-in-from-none-animate ">
-            <p className="text-xs font-bold justify-center text-center">
-                - Kolej Melayu Kuala Kangsar -
-            </p>
-        </div>
-        <WidgetsGroup />
-    </>
+
+    const [
+        particlesEngineInit,
+        particlesLoaded,
+        options] = useParticles(CONFETTI_SCHOOLCARD)
+
+    if (particlesEngineInit) {
+        return <>
+            <Particles id="tsparticles" particlesLoaded={particlesLoaded} options={options} />
+            <Cover />
+            <div className="relative">
+                <div className="absolute items-center top-[45rem] w-full app-fade-in-from-none-animate ">
+                    <p className="text-xs font-bold justify-center text-center">
+                        - Kolej Melayu Kuala Kangsar -
+                    </p>
+                </div>
+                <div className="absolute items-center top-[50rem] w-full app-fade-in-from-none-animate ">
+                    <p className="text-xs font-bold justify-center text-center">
+                        - End of card -
+                    </p>
+                </div>
+            </div>
+
+            <WidgetsGroup />
+        </>
+    }
+
+    return <>Loading</>
+
 }

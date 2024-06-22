@@ -5,7 +5,7 @@ export default function App() {
   return (
     <>
       <div className="flex justify-center items-center">
-        <div className="relative w-[420px] shadow-custom min-h-screen">
+        <div className="relative w-[420px] shadow-custom min-h-screen overflow-y-auto">
           <SchoolCard />
         </div>
       </div>
